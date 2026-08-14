@@ -3,6 +3,7 @@ span {
     top: 15px;
     right: 25px;
     cursor: pointer;
+    user-select: none;
 
     transform: rotate(0deg);
     transition: transform 0.4s ease-in-out;

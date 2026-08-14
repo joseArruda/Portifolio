@@ -68,14 +68,19 @@ html, body{
     overflow-y: auto;
 }
 
+svg{
+  user-select: none;
+}
+
 a{
-    text-decoration: none;
-    color: var(--color-text);
+  user-select: none;
+  text-decoration: none;
+  color: var(--color-text);
 }
 
 html{
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
+  scroll-behavior: auto;
+  scrollbar-width: thin;
   scrollbar-color: var(--glass) var(--glass-weak);
 }
 
