@@ -1,0 +1,25 @@
+.container-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    margin: 1.5rem auto;
+    width: 100%;
+    h2{
+        text-transform: uppercase;
+        user-select: none;
+        margin-bottom: 3rem;
+
+        span{
+            color: var(--span-logo);
+        }
+        color: var(--color-svg);
+        font-size: 31px;
+        text-align: center;
+    }
+    .container-projects{
+        margin: 0 1rem;
+        display: flex;
+        justify-content: center;
+    }
+}

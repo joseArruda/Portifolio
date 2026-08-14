@@ -1,34 +1,96 @@
 .container-main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0;
-      
+  height: 75%;
+  overflow-y: hidden;
 
   .container-content {
-    height: 50vh;
-    width: 80%;
+    user-select: none;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
+    gap: 1rem;
     flex-direction: column;
     text-align: center;
     color: var(--color-svg);
 
-    .text{
+    .projects-images-home{
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      top: 40px;
+      align-items: center;
+      z-index: -1;
       width: 100%;
-      max-width: 600px;
-      
-    }
-  }
+      height: 95%;
+      opacity: 0.6;
 
-  /* From Uiverse.io by adamgiebl */ 
-button {
+      .projects-images-home-left{
+        display: flex;
+        flex-direction: column;
+        
+
+        .project-1{
+          animation: floating infinite 5s ease-in-out;
+          position: absolute;
+          left: 60px;
+          top: 100px;
+          
+        }
+
+        .project-2{
+          animation: floating infinite 7s ease-in-out;
+          position: absolute;
+          left: 30px;
+          bottom: 110px;
+        }
+      }
+      .projects-images-home-right{
+        display: flex;
+        flex-direction: column;
+
+        .project-3{
+          animation: floating infinite 4s ease-in-out;
+          position: absolute;
+          right: 60px;
+          bottom: 210px;
+          width: 14rem;
+        }
+
+      }
+      img{
+        width: 16rem;
+        border-radius: 20px;
+        height: auto;
+      }
+    }
+
+    .title{
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.5rem, 3rem, 3.5rem);
+      letter-spacing: 3px;
+      span{
+        color: var(--span-logo);
+      }
+    }
+    .text{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+      font-size: clamp(1rem, 1.2rem, 1.5rem);
+    }
+
+    button {
   font-family: inherit;
   font-size: 20px;
-  background: var(--color-svg);
-  color: var(--color-text);
+  background: var(--blob-1);
+  color: var(--color-svg);
   padding: 0.7em 1em;
   padding-left: 0.9em;
   display: flex;
@@ -50,6 +112,7 @@ button svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
+   
 }
 
 button:hover .svg-wrapper {
@@ -67,6 +130,17 @@ button:hover span {
 button:active {
   transform: scale(0.95);
 }
+  }
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+}
+
 
 @keyframes fly-1 {
   from {
@@ -78,4 +152,41 @@ button:active {
   }
 }
 
+@keyframes floating {
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+@media (max-width: 1200px) {
+  .projects-images-home-right{
+    opacity: 0.7;
+
+
+  }
+
+  .projects-images-home-left{
+    opacity: 0.7;
+
+    .project-2{
+      display: none;
+    }
+
+  }
+}
+
+@media (max-width: 400px) {
+  .title{
+    margin: 0;
+  }
 }

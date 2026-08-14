@@ -21,6 +21,10 @@
             "polyfills": [
               "zone.js"
             ],
+            "scripts": [
+              "src/assets/InertiaPlugin.min.js"
+            ]
+            ,
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [

@@ -6,7 +6,7 @@ import { Carousel } from "../../shared/components/carousel/carousel";
 
 @Component({
   selector: 'app-projects',
-  imports: [Logo, ToggleTheme, Navbar, Carousel],
+  imports: [Logo, ToggleTheme, Navbar, Carousel ],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })

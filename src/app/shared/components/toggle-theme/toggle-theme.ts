@@ -27,14 +27,58 @@ constructor(
 
  }
 
-  isDark() {
+ toggleTheme(event: MouseEvent) {
 
-  this.themeIsDark = !this.themeIsDark;
+  const x = event.clientX;
+  const y = event.clientY;
 
-  this.themeService.setTheme(
-    this.themeIsDark ? 'dark' : 'light'
+  const html = document.documentElement;
+
+  html.style.setProperty(
+    '--x',
+    `${x}px`
   );
 
- }
+  html.style.setProperty(
+    '--y',
+    `${y}px`
+  );
+
+
+  const newTheme: 'light' | 'dark' =
+    this.themeIsDark ? 'light' : 'dark';
+
+
+  const changeTheme = () => {
+
+    this.themeIsDark = newTheme === 'dark';
+
+    this.themeService.setTheme(newTheme);
+
+  };
+
+
+  if (!document.startViewTransition) {
+
+    changeTheme();
+
+    return;
+  }
+
+  html.classList.add('theme-transition');
+
+
+  const transition =
+    document.startViewTransition(changeTheme);
+
+
+  transition.finished.then(() => {
+
+    html.classList.remove('theme-transition');
+
+  });
+
+}
+
 
 }

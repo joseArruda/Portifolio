@@ -2,22 +2,28 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        margin-top: 2rem;
+        justify-content: center;
         gap: 20px;
+        padding: 2rem 35px 0;
 
           a{
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: "Castoro", serif;
             font-size: 31px;
             font-weight: 600;
             color: var(--color-svg);
             user-select: none;
-            margin: 1rem auto;
+            margin: 0 auto;
         }
 
         span{
-            color: var(--span-logo);
+            background-image: url("/assets/images/background-ciano-orange.png");
+            background-size: 600%;
+            background-position: 0 50%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #ddd;
+            animation: rotate 15s infinite alternate ease-in;
         }
 
         
@@ -36,11 +42,11 @@
 
 .wrapper .icon {
   position: relative;
-  background: #fff;
+  background: var(--color-svg);
   border-radius: 50%;
   margin: 0 auto;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -49,6 +55,10 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon svg {
+  fill: var(--background-primary);
 }
 
 .wrapper .tooltip {
@@ -103,11 +113,29 @@
   color: #fff;
 }
 
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-  background: #ce0e1e;
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background: #12db00;
+  color: #fff;
+}
+
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+  background: #ffd000;
   color: #fff;
 }
 
     }
+
+@keyframes rotate {
+  0%{
+    background-position: 0
+    50%;
+  }
+  100%{
+    background-position: 100%
+    50%
+  }
+}

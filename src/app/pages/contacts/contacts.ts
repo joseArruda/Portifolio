@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { Logo } from "../../shared/components/logo/logo";
 import { ToggleTheme } from "../../shared/components/toggle-theme/toggle-theme";
 import { Navbar } from "../../shared/components/navbar/navbar";
-import { Background } from "../../shared/components/background/background";
+import { gsap } from "gsap";
+import { InertiaPlugin } from "gsap/InertiaPlugin";
+import {Draggable} from "gsap/Draggable";
 
 @Component({
   selector: 'app-contacts',
@@ -10,6 +12,21 @@ import { Background } from "../../shared/components/background/background";
   templateUrl: './contacts.html',
   styleUrl: './contacts.scss',
 })
+
+
 export class Contacts {
+
+    ngOnInit(){
+
+    gsap.registerPlugin(InertiaPlugin, Draggable);
+    Draggable.create(".bi-contact",{
+
+    type:"rotation",
+
+    inertia:true
+
+});
+
+  }
 
 }

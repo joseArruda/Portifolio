@@ -1,25 +1,418 @@
+<app-logo></app-logo>
+
+<app-toggle-theme></app-toggle-theme>
+
 <main class="container-main">
-  <app-logo></app-logo>
+  <section class="container-profile">
+    <h2 class="title-profile"><span>Sobre</span> mim</h2>
+    <div class="button-options">
+      <button
+        [class.active]="expirenceNumber === 0"
+        class="button"
+        (click)="defineContentExpirence(0)"
+      >
+        <p>Formações</p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon-profile" viewBox="0 0 256 256">
+          <path
+            fill="currentColor"
+            d="M124 136a4 4 0 0 1-4 4H72a4 4 0 0 1 0-8h48a4 4 0 0 1 4 4m-4-36H72a4 4 0 0 0 0 8h48a4 4 0 0 0 0-8m108 59.74V224a4 4 0 0 1-6 3.47l-26-14.86l-26 14.86a4 4 0 0 1-6-3.47v-28H40a12 12 0 0 1-12-12V56a12 12 0 0 1 12-12h176a12 12 0 0 1 12 12v32.26a47.92 47.92 0 0 1 0 71.48M196 84a40 40 0 1 0 40 40a40 40 0 0 0-40-40m-32 104v-28.26a48 48 0 0 1 56-77.28V56a4 4 0 0 0-4-4H40a4 4 0 0 0-4 4v128a4 4 0 0 0 4 4Zm56-22.46a47.81 47.81 0 0 1-48 0v51.57l22-12.58a4 4 0 0 1 4 0l22 12.58Z"
+          />
+        </svg>
+      </button>
+      <button
+        [class.active]="expirenceNumber === 1"
+        class="button"
+        (click)="defineContentExpirence(1)"
+      >
+        <p>Experiências</p>
+        <svg
+          class="icon-profile"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+        >
+          <title xmlns="">person</title>
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+          >
+            <path d="m20.5 23.5l-2-7L12 15l-6.5 1.5l-2 7zM8.625 5.812L12 7.5h4.5" />
+            <path
+              d="M16.5 12.25L12 14l-4.5-1.75v-6L12 4.5l4.5 1.75zm-6-2.25v-.5m3 .5v-.5m.953 6.066L12 19.5l-2.453-3.934"
+            />
+          </g>
+        </svg>
+      </button>
+      <button
+        [class.active]="expirenceNumber === 2"
+        class="button"
+        (click)="defineContentExpirence(2)"
+      >
+        <p>Conhecimentos</p>
+        <svg
+          class="icon-profile"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+        >
+          <title xmlns="">ai-brain-04</title>
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M7 4.5a3 3 0 0 0-2.567 4.554a3.001 3.001 0 0 0 0 5.893M7 4.5a2.5 2.5 0 0 1 5 0v15a2.5 2.5 0 0 1-5 0a3 3 0 0 1-2.567-4.553M7 4.5c0 .818.393 1.544 1 2m-3.567 8.447A3 3 0 0 1 6 13.67m13.25-8.92L17 7h-2m3.5-2.25a.75.75 0 1 0 1.5 0a.75.75 0 0 0-1.5 0m.75 14.5L17 17h-2m3.5 2.25a.75.75 0 1 1 1.5 0a.75.75 0 0 1-1.5 0m.75-7.25H15m3.5 0a.75.75 0 1 0 1.5 0a.75.75 0 0 0-1.5 0"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="container-content">
+      <div *ngIf="expirenceNumber == 0" class="content formations">
+        <p class="text">
+          Entre minhas formações acadêmicas, sou graduado em
+          <span (click)="defineCertificate(0)">Análise e Desenvolvimento de Sistemas</span> pela
+          UNIP e possuo duas pós-graduações Lato Sensu pela UniBF, em
+          <span (click)="defineCertificate(1)">Sistemas de Informação</span> e
+          <span (click)="defineCertificate(2)"
+            >Desenvolvimento de Aplicações para Dispositivos Móveis.</span
+          >. Essas formações contribuíram para a construção de uma base sólida em tecnologia,
+          desenvolvimento de software, análise de sistemas e criação de aplicações, fortalecendo
+          minha capacidade de atuar no desenvolvimento de soluções eficientes, modernas e alinhadas
+          às necessidades dos usuários e das empresas.
+        </p>
+        <div class="certificate">
+          <img *ngIf="certificate == 0" src="assets/images/certificacoes/DIPLOMA-ADS.png" alt="" />
 
-  <app-toggle-theme></app-toggle-theme>
+          <img
+            *ngIf="certificate == 1"
+            src="assets/images/certificacoes/DESENVOLVIMENTO-APPS.jpg"
+            alt=""
+          />
+          <img
+            *ngIf="certificate == 2"
+            src="assets/images/certificacoes/SISTEMAS-INFORMACAO.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div *ngIf="expirenceNumber == 1" class="content profile">
+        <p>
+          Minha trajetória profissional inclui experiências diversificadas que fortaleceram minhas
+          habilidades técnicas e interpessoais. Atuei como
+          <strong>Auxiliar de Escritório</strong> , adquirindo organização e visão administrativa;
+          Atuei como <strong>Auxiliar de Loja</strong> , onde desenvolvi habilidades que me
+          proporcionaram um desenvolvimento considerável na área profissional; Além da expêriencia
+          como <strong>Analista de PCP</strong>, onde fortaleci minhas habilidades administrativas e
+          pude me aperfeiçoar no trabalho em equipe.
+        </p>
 
-  <h2>Sobre mim</h2>
+        <section class="container-timeline">
+          <section class="timeline">
+            <div class="line"></div>
 
-  <div *ngIf="teste == 1" class="teste">pessoa 1</div>
+            <div class="item">
+              <div (click)="defineJobExpirience(1)" class="btn-open circle">
+                <p>Aux. Escritório</p>
+              </div>
 
-  <div *ngIf="teste == 2" class="teste">pessoa 2</div>
+              <div *ngIf="jobExpirence == 1" class="card left">
+                <h3>Aprendi de Auxiliar de Escritório</h3>
 
-  <div *ngIf="teste == 3" class="teste">pessoa 3</div>
+                <h4>Home Center Tend Tudo</h4>
 
-  <button (click)="passador()">Passe</button>
+                <p>
+                  Atuação no suporte às rotinas administrativas, organização e arquivamento de
+                  documentos, atualização de planilhas, controle de informações, atendimento ao
+                  público e apoio às demandas diárias do escritório.
+                </p>
 
-  <dialog id="modal">
-    Aqui esta seu modal
+                <p>
+                  Ago/2017
 
-    <button commandfor="modal" command="close">FEchar</button>
-  </dialog>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-suitcase-lg-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7 0a2 2 0 0 0-2 2H1.5A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14H2a.5.5 0 0 0 1 0h10a.5.5 0 0 0 1 0h.5a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2H11a2 2 0 0 0-2-2zM6 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1zM3 13V3h1v10zm9 0V3h1v10z"
+                    />
+                  </svg>
+                  Ago/2019
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div (click)="defineJobExpirience(2)" class="circle">
+                <p>Auxiliar de Loja</p>
+              </div>
 
-  <button commandfor="modal" command="show-modal">Abrir</button>
+              <div *ngIf="jobExpirence == 2" class="card">
+                <h3>Super Veneza</h3>
 
+                <h4>Auxiliar de Loja</h4>
+
+                <p>
+                  Atuação com o atendimento ao cliente, reposição de mercadorias, entrega a
+                  domicilio. Dentre outras atividades que me proporcionaram um desenvolvimento
+                  considerável na área profissional.
+                </p>
+
+                <p>
+                  Out/2020
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-suitcase-lg-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7 0a2 2 0 0 0-2 2H1.5A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14H2a.5.5 0 0 0 1 0h10a.5.5 0 0 0 1 0h.5a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2H11a2 2 0 0 0-2-2zM6 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1zM3 13V3h1v10zm9 0V3h1v10z"
+                    />
+                  </svg>
+                  Dez/2021
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div (click)="defineJobExpirience(3)" class="circle">
+                <p>Analista PCP</p>
+              </div>
+
+              <div *ngIf="jobExpirence == 3" class="card right">
+                <h3>Analista de PCP</h3>
+
+                <h4>CPC Estruturas</h4>
+
+                <p>
+                  Responsável pelo acompanhamento de produção, onde armazenava os dados em planilhas
+                  de Excel e atualizava o status de produção no sistema Strumis, também responsável
+                  pela área da expedição.
+                </p>
+
+                <p>
+                  Nov/2023
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-suitcase-lg-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7 0a2 2 0 0 0-2 2H1.5A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14H2a.5.5 0 0 0 1 0h10a.5.5 0 0 0 1 0h.5a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2H11a2 2 0 0 0-2-2zM6 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1zM3 13V3h1v10zm9 0V3h1v10z"
+                    />
+                  </svg>
+                  Jan/2025
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+      <div *ngIf="expirenceNumber == 2" class="content tecnologies">
+        <p class="text-tecnologies">
+          Possuo conhecimentos técnicos em um conjunto diversificado de tecnologias voltadas ao
+          desenvolvimento de aplicações web e à construção de soluções modernas e eficientes. Possuo
+          conhecimento de conceitos e prática com Angular, TypeScript, JavaScript, Laravel, PHP,
+          MySQL e Sass/SCSS, além de utilizar Git e GitHub para controle de versão, organização e
+          gerenciamento dos projetos. Minha base técnica me permite atuar no desenvolvimento
+          Front-end e Back-end, integrando interfaces responsivas a APIs e bancos de dados, sempre
+          buscando aplicar boas práticas de desenvolvimento, organização de código, manutenção e
+          evolução contínua das aplicações.
+        </p>
+        <div class="container-tecnologies-icons">
+          <div class="icons front-end">
+            <div class="content-icons">
+              <span>
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/nolan/64/code--v2.png"
+                  alt="code--v2"
+                />
+              </span>
+
+              <h2>Front-end</h2>
+            </div>
+            <div class="tecnologies-icons">
+              <p>
+                <svg
+                  class="speed1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                >
+                  <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
+                  <path
+                    fill="#000001"
+                    d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"
+                  ></path>
+                </svg>
+                JavaScript
+              </p>
+
+              <p>
+                <svg
+                  class="speed1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#ef4444"
+                >
+                  <path
+                    d="M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z"
+                  />
+                </svg>
+                Angular
+              </p>
+
+              <p>
+                <svg
+                  class="speed1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#3b82f6"
+                >
+                  <path
+                    d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"
+                  />
+                </svg>
+                TypeScript
+              </p>
+
+              <p>
+                <svg
+                  class="speed1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#f06292"
+                    d="M39.867,25.956c-1.538,0.008-2.87,0.377-3.986,0.928c-0.408-0.815-0.822-1.532-0.891-2.065	c-0.081-0.622-0.175-0.994-0.077-1.735c0.098-0.741,0.527-1.791,0.521-1.87c-0.006-0.079-0.096-0.456-0.983-0.463	c-0.887-0.006-1.646,0.171-1.735,0.405c-0.089,0.234-0.26,0.761-0.366,1.311c-0.155,0.804-1.771,3.673-2.688,5.173	c-0.3-0.586-0.555-1.102-0.608-1.51c-0.081-0.622-0.175-0.994-0.077-1.735c0.098-0.741,0.527-1.791,0.521-1.87	c-0.006-0.079-0.096-0.456-0.983-0.463c-0.887-0.006-1.646,0.171-1.735,0.405c-0.089,0.234-0.185,0.781-0.366,1.311	c-0.182,0.529-2.329,5.314-2.892,6.555c-0.287,0.632-0.536,1.14-0.712,1.486c-0.001-0.001-0.001-0.002-0.001-0.002	s-0.011,0.023-0.029,0.062c-0.151,0.295-0.24,0.458-0.24,0.458s0.001,0.002,0.003,0.006c-0.12,0.217-0.248,0.418-0.311,0.418	c-0.044,0-0.133-0.577,0.019-1.369c0.32-1.66,1.087-4.248,1.08-4.338c-0.004-0.046,0.143-0.497-0.501-0.733	c-0.626-0.229-0.849,0.153-0.906,0.154c-0.055,0.001-0.096,0.135-0.096,0.135s0.697-2.911-1.33-2.911	c-1.268,0-3.024,1.387-3.889,2.644c-0.546,0.298-1.715,0.936-2.954,1.617c-0.476,0.262-0.962,0.529-1.423,0.783	c-0.031-0.035-0.063-0.069-0.095-0.104c-2.459-2.623-7.003-4.478-6.811-8.005c0.07-1.282,0.516-4.658,8.733-8.752	c6.731-3.354,12.12-2.431,13.051-0.386c1.33,2.923-2.88,8.354-9.87,9.138c-2.663,0.299-4.066-0.734-4.415-1.118	c-0.367-0.405-0.422-0.423-0.559-0.347c-0.223,0.124-0.082,0.481,0,0.694c0.209,0.543,1.065,1.506,2.525,1.986	c1.285,0.422,4.412,0.653,8.193-0.81c4.236-1.638,7.543-6.196,6.571-10.005c-0.988-3.874-7.412-5.148-13.492-2.988	C12.44,9.332,8.523,11.35,5.706,13.984c-3.349,3.132-3.883,5.859-3.663,6.998c0.782,4.048,6.361,6.684,8.595,8.637	c-0.11,0.061-0.214,0.118-0.308,0.17c-1.12,0.554-5.373,2.78-6.437,5.131c-1.207,2.667,0.192,4.581,1.118,4.839	c2.869,0.798,5.813-0.638,7.396-2.998c1.582-2.359,1.389-5.432,0.663-6.834c-0.009-0.017-0.019-0.034-0.028-0.052	c0.289-0.171,0.584-0.345,0.876-0.517c0.57-0.335,1.13-0.647,1.615-0.911c-0.272,0.744-0.471,1.637-0.574,2.926	c-0.122,1.514,0.499,3.471,1.311,4.241c0.358,0.339,0.788,0.347,1.06,0.347c0.945,0,1.376-0.786,1.851-1.716	c0.582-1.14,1.099-2.468,1.099-2.468s-0.648,3.586,1.118,3.586c0.644,0,1.291-0.835,1.58-1.26c0.001,0.005,0.001,0.007,0.001,0.007	s0.017-0.028,0.05-0.083c0.067-0.102,0.105-0.167,0.105-0.167s0.001-0.007,0.003-0.019c0.259-0.449,0.833-1.473,1.693-3.162	c1.112-2.182,2.178-4.916,2.178-4.916s0.099,0.668,0.424,1.774c0.191,0.65,0.597,1.369,0.918,2.059	c-0.258,0.358-0.416,0.563-0.416,0.563s0.001,0.004,0.004,0.011c-0.206,0.274-0.437,0.569-0.679,0.857	c-0.878,1.045-1.923,2.239-2.063,2.583c-0.165,0.406-0.126,0.704,0.193,0.945c0.233,0.175,0.647,0.203,1.08,0.174	c0.789-0.053,1.343-0.249,1.617-0.368c0.427-0.151,0.924-0.388,1.39-0.731c0.861-0.633,1.38-1.538,1.33-2.738	c-0.028-0.661-0.238-1.316-0.505-1.934c0.078-0.112,0.156-0.226,0.235-0.34c1.357-1.984,2.41-4.164,2.41-4.164	s0.099,0.668,0.424,1.774c0.164,0.559,0.489,1.17,0.781,1.768c-1.276,1.037-2.067,2.242-2.342,3.032	c-0.508,1.462-0.11,2.124,0.636,2.275c0.338,0.068,0.816-0.087,1.175-0.239c0.447-0.148,0.984-0.395,1.486-0.764	c0.861-0.633,1.689-1.519,1.639-2.718c-0.023-0.546-0.171-1.088-0.372-1.608c1.082-0.451,2.482-0.701,4.266-0.493	c3.827,0.447,4.577,2.836,4.434,3.836c-0.144,1-0.946,1.55-1.215,1.716c-0.268,0.166-0.35,0.224-0.328,0.347	c0.033,0.179,0.157,0.173,0.386,0.134c0.315-0.053,2.009-0.813,2.082-2.659C46.089,28.509,43.844,25.935,39.867,25.956z M10.37,35.9	c-1.268,1.383-3.038,1.905-3.798,1.465c-0.82-0.475-0.495-2.511,1.06-3.979c0.948-0.894,2.172-1.718,2.984-2.225	c0.185-0.111,0.456-0.274,0.786-0.472c0.055-0.031,0.086-0.048,0.086-0.048l-0.001-0.002c0.064-0.038,0.129-0.077,0.196-0.118	C12.25,32.61,11.701,34.449,10.37,35.9z M19.605,29.623c-0.441,1.076-1.365,3.83-1.928,3.682c-0.483-0.127-0.777-2.22-0.096-4.28	c0.342-1.037,1.074-2.276,1.504-2.757c0.692-0.774,1.454-1.027,1.639-0.713C20.959,25.955,19.882,28.948,19.605,29.623z M27.234,33.263c-0.187,0.098-0.359,0.159-0.438,0.112c-0.059-0.035,0.077-0.164,0.077-0.164s0.954-1.027,1.33-1.494	c0.219-0.272,0.472-0.595,0.748-0.955c0.002,0.036,0.003,0.072,0.003,0.107C28.952,32.099,27.764,32.929,27.234,33.263z M33.111,31.923c-0.14-0.099-0.116-0.42,0.343-1.421c0.18-0.393,0.592-1.054,1.306-1.686c0.083,0.26,0.133,0.509,0.132,0.741	C34.883,31.105,33.779,31.683,33.111,31.923z"
+                  ></path>
+                </svg>
+                Sass
+              </p>
+            </div>
+          </div>
+
+          <div class="icons back-end">
+            <div class="content-icons">
+              <span
+                ><img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/fluency/48/database--v1.png"
+                  alt="database--v1"
+              /></span>
+              <h2>Back-end</h2>
+            </div>
+            <div class="tecnologies-icons">
+              <p>
+                <img
+                  class="speed2"
+                  src="data:image/png;base64,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"
+                  alt="laravel"
+                />
+                Laravel
+              </p>
+
+              <p>
+                <img
+                  class="speed2"
+                  src="data:image/png;base64,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"
+                  alt="php--v2"
+                />
+                PHP
+              </p>
+
+              <p>
+                <svg
+                  class="speed2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#0059e9"
+                >
+                  <path
+                    d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"
+                  />
+                </svg>
+                MySQL
+              </p>
+            </div>
+          </div>
+
+          <div class="icons tools">
+            <div class="content-icons">
+              <span
+                ><img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/fluency/48/maintenance--v1.png"
+                  alt="maintenance--v1"
+              /></span>
+              <h2>Ferramentas</h2>
+            </div>
+            <div class="tecnologies-icons">
+              <p>
+                <svg
+                  class="speed1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#F4511a"
+                    d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"
+                  ></path>
+                </svg>
+                Git
+              </p>
+
+              <p>
+                <svg
+                  class="speed1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 50 50"
+                >
+                  <path
+                    d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"
+                  ></path>
+                </svg>
+                GitHub
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <app-navbar></app-navbar>
 </main>
