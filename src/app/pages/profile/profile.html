@@ -1,0 +1,25 @@
+<main class="container-main">
+  <app-logo></app-logo>
+
+  <app-toggle-theme></app-toggle-theme>
+
+  <h2>Sobre mim</h2>
+
+  <div *ngIf="teste == 1" class="teste">pessoa 1</div>
+
+  <div *ngIf="teste == 2" class="teste">pessoa 2</div>
+
+  <div *ngIf="teste == 3" class="teste">pessoa 3</div>
+
+  <button (click)="passador()">Passe</button>
+
+  <dialog id="modal">
+    Aqui esta seu modal
+
+    <button commandfor="modal" command="close">FEchar</button>
+  </dialog>
+
+  <button commandfor="modal" command="show-modal">Abrir</button>
+
+  <app-navbar></app-navbar>
+</main>

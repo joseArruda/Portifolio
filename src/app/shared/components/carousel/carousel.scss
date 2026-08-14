@@ -1,0 +1,87 @@
+.carousel{
+  margin: 0 auto;
+  position:relative;
+  overflow:hidden;
+  width: 70vw;
+  height:500px;
+  border-radius:12px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 3;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots span.active {
+  background: var(--wine-red);
+}
+
+.carousel-track{
+  display:flex;
+  transition: transform .5s ease;
+  height:100%;
+}
+
+.slide{
+  flex:0 0 100%;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.slide-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  filter:blur(20px);
+  transform:scale(1.2);
+  opacity:0.6;
+}
+
+.slide-img{
+  position:relative;
+  max-height:98%;
+  max-width:98%;
+  object-fit:contain;
+  z-index:2;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}

@@ -1,0 +1,80 @@
+:root{
+    --background-primary: #ffffff;
+    --background-secondary: #e6e6e6;
+    --primary-gradient: linear-gradient(
+    135deg,
+    #FFFFFF,
+    #F8FAFC,
+    #EEF4FF,
+    #E1ECFF
+    );
+    --color-svg: #03132F;
+    --color-text: #fff;
+    --span-logo: #ff9100;
+    --gradient: linear-gradient(120deg, #008, #ddd);
+    --hover: #df7700;
+    --shadowColor: #FFD700;
+
+    --blob-1: rgba(37,99,235,.08);
+    --blob-2: rgba(96,165,250,.06);
+    --blob-3: rgba(29,78,216,.06);
+
+    --grid-color: rgba(7, 68, 211, 0.05);
+
+    --particle-color: rgba(255, 145, 0, 0.85);
+
+    --line-color: rgb(0, 0, 0);
+
+    
+}
+
+body.dark{
+    --background-primary: #020617;
+    --background-secondary: #052766;
+    --primary-gradient: linear-gradient(
+    135deg,
+    #020617 0%,
+    #03132F 20%,
+    #052766 55%,
+    #0A3D91 100%);
+    --primary-color: #020617;
+    --second-color: #03132F;
+    --third-color: #052766;
+    --fourth-color: #0A3D91;
+    --color-svg: #fff;
+    --color-text: #020617;
+    --span-logo: #00ffd5;
+    --hover: #1aeee3;
+    --shadow-color: #0f71e9;
+
+    --blob-1: rgba(231, 190, 9, 0.08);
+    --blob-2: rgba(236, 233, 6, 0.06);
+    --blob-3: rgba(207, 205, 67, 0.06);
+
+    --grid-color: rgba(21, 216, 141, 0.05);
+
+    --particle-color: rgba(18, 88, 218, 0.918);
+
+    --line-color: rgb(255, 255, 255);
+
+}
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    height: 100vh;
+    width: auto;
+    overflow-y: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: var(--primary-gradient);
+    font-family: "Nunito", sans-serif;
+}
