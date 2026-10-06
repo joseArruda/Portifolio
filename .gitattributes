@@ -1,0 +1,4 @@
+# Arquivos gerados pelo Angular
+.angular/
+dist/
+node_modules/ linguist-vendored
