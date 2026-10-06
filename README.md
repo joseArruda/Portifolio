@@ -1,59 +1,133 @@
-# MEUPORTIFOLIO
+# 👨‍💻 José Arruda — Portfólio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
+> Portfólio pessoal desenvolvido para apresentar minha trajetória profissional, formação acadêmica, conhecimentos técnicos e projetos na área de desenvolvimento de software.
 
-## Development server
+🔗 **Portfólio online:** [Acessar portfólio](https://portifolioja.vercel.app/home)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Sobre o projeto
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Este projeto é o meu **portfólio profissional**, desenvolvido com foco em apresentar de forma objetiva minha experiência, formação e evolução como desenvolvedor.
 
-## Code scaffolding
+A aplicação foi construída utilizando **Angular, TypeScript e SCSS**, com uma interface responsiva, moderna e adaptada para diferentes dispositivos.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Além de apresentar minhas informações profissionais, o portfólio também reúne projetos desenvolvidos durante minha trajetória de aprendizado e prática em desenvolvimento web.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠️ Tecnologias utilizadas
 
-```bash
-ng generate --help
-```
+### Front-end
 
-## Building
+* **Angular**
+* **TypeScript**
+* **HTML5**
+* **SCSS**
+* **JavaScript**
 
-To build the project run:
+### Ferramentas e tecnologias complementares
 
-```bash
-ng build
-```
+* **Git**
+* **GitHub**
+* **APIs REST**
+* **Consumo de APIs com Fetch**
+* **Responsive Web Design**
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## ✨ Funcionalidades
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+* 📌 Apresentação profissional
+* 🎓 Formação acadêmica
+* 💻 Apresentação de conhecimentos técnicos
+* 🚀 Exibição de projetos
+* 📱 Layout responsivo
+* 🌓 Suporte a tema claro e escuro
+* ✨ Animações e efeitos de interação
+* 🧭 Navegação entre seções
+* 📂 Organização das informações profissionais
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 📂 Projetos apresentados
 
-For end-to-end (e2e) testing, run:
+O portfólio reúne projetos desenvolvidos utilizando diferentes tecnologias e conceitos de desenvolvimento web.
 
-```bash
-ng e2e
-```
+Entre eles estão projetos envolvendo:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+* **Angular**
+* **Laravel**
+* **PHP**
+* **MySQL**
+* **JavaScript**
+* **TypeScript**
+* **Java**
+* **Spring Boot**
 
-## Additional Resources
+Cada projeto possui uma proposta específica e representa parte da minha evolução prática como desenvolvedor.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 🎓 Formação
+
+**Análise e Desenvolvimento de Sistemas — UNIP**
+
+Pós-graduações:
+
+* **Sistemas de Informação — UniBF**
+* **Desenvolvimento de Aplicações para Dispositivos Móveis — UniBF**
+
+---
+
+## 👨‍💻 Sobre mim
+
+Sou **Desenvolvedor Full Stack**, formado em Análise e Desenvolvimento de Sistemas, com pós-graduações em Sistemas de Informação e Desenvolvimento de Aplicações para Dispositivos Móveis.
+
+Tenho experiência prática no desenvolvimento de aplicações web utilizando tecnologias como **Angular, TypeScript, JavaScript, Laravel, PHP e MySQL**.
+
+Atualmente também venho aprofundando meus conhecimentos em **Java e Spring Boot**, buscando ampliar minha atuação no desenvolvimento de APIs e aplicações back-end.
+
+Meu objetivo é continuar evoluindo tecnicamente e atuar profissionalmente como **Desenvolvedor Full Stack**, contribuindo para projetos reais e adquirindo cada vez mais experiência no desenvolvimento de software.
+
+---
+
+## 📈 Atualmente estudando
+
+Atualmente estou aprofundando meus conhecimentos em:
+
+* ☕ Java
+* 🌱 Spring Boot
+* 🗄️ APIs REST
+* 🐳 Docker
+* ☁️ Computação em nuvem
+* 🔐 Boas práticas de desenvolvimento
+* 🧪 Testes e qualidade de software
+
+---
+
+## 🎯 Objetivo profissional
+
+Busco uma oportunidade como **Desenvolvedor Full Stack Júnior**, onde possa aplicar meus conhecimentos, participar de projetos reais e continuar evoluindo profissionalmente.
+
+Tenho interesse principalmente em oportunidades **remotas ou presenciais/híbridas em Brasília-DF**.
+
+---
+
+## 📫 Contato
+
+* 💼 **LinkedIn:** [José Arruda](https://linkedin.com/in/jose-arruda-vieira/)
+* 🐙 **GitHub:** [joseArruda](https://github.com/joseArruda)
+* 🌐 **Portfólio:** [Acessar portfólio](https://portifolioja.vercel.app/home)
+
+---
+
+## 📄 Licença
+
+Este projeto está disponível para fins de apresentação profissional e demonstração de conhecimentos em desenvolvimento de software.
+
+---
+
+<p align="center">
+  Desenvolvido por <strong>José Arruda</strong>
+</p>
